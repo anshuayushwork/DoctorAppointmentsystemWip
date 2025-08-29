@@ -52,6 +52,4 @@ minikube service docbook-frontend-svc --url
 - `GET /api/appointments/doctor/{id}` • `GET /api/appointments/patient/{id}`
 - `POST /api/appointments/{id}/status?value=APPROVED|REJECTED`
 
-## Notes
-- H2 in-memory DB for simplicity; swap to MySQL by editing `application.properties`.
-- Add security/JWT if required for production.
+
