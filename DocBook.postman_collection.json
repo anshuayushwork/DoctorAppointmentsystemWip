@@ -1,0 +1,117 @@
+{
+  "info": {
+    "name": "DocBook API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Signup",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/auth/signup",
+          "host": [
+            "http://localhost:8080"
+          ],
+          "path": [
+            "api",
+            "auth",
+            "signup"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\": \"Test\", \"email\": \"t@t.com\", \"password\": \"pass\", \"role\": \"PATIENT\"}"
+        }
+      }
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/auth/login",
+          "host": [
+            "http://localhost:8080"
+          ],
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"email\": \"t@t.com\", \"password\": \"pass\"}"
+        }
+      }
+    },
+    {
+      "name": "List Doctors",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/doctors"
+      }
+    },
+    {
+      "name": "Create Doctor",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "http://localhost:8080/api/doctors",
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\": \"Dr. Meera\", \"specialization\": \"Cardiology\"}"
+        }
+      }
+    },
+    {
+      "name": "Book Appointment",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "http://localhost:8080/api/appointments/book",
+        "body": {
+          "mode": "raw",
+          "raw": "{\"doctorId\": 1, \"patientId\": 1, \"patientName\": \"Test\", \"date\": \"2025-09-01\", \"time\": \"09:00\"}"
+        }
+      }
+    },
+    {
+      "name": "All Appointments",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/appointments"
+      }
+    },
+    {
+      "name": "Approve Appointment",
+      "request": {
+        "method": "POST",
+        "url": "http://localhost:8080/api/appointments/1/status?value=APPROVED"
+      }
+    }
+  ]
+}
