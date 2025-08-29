@@ -1,7 +1,5 @@
 # Doctor Appointment — Production-Ready Monorepo
 
-Covers your evaluation criteria: naming conventions, project structure, REST endpoints (tested via Postman), GitHub-ready, Dockerfiles, Jenkins pipeline, K8s YAML for minikube, Angular app (proper views), and frontend-backend integration.
-
 ## Structure
 - `backend/` Spring Boot 3 (REST + H2 + OpenAPI at `/swagger-ui.html`)
 - `frontend/` Angular 17 (standalone components)
